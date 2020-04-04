@@ -21,6 +21,7 @@ const auth = require('./routes/auth');
 const users = require('./routes/users');
 const reviews = require('./routes/reviews');
 
+// Load env vars
 dotenv.config({ path: './config/config.env' });
 
 connectDB();
