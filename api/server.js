@@ -14,7 +14,7 @@ const cors = require('cors');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
-// Route files　routesのファイルに直接アクセスできるように
+// Route files　routesのファイルに直接アクセスできるように，下を参照
 const bootcamps = require('./routes/bootcamps');
 const courses = require('./routes/courses');
 const auth = require('./routes/auth');
@@ -84,7 +84,8 @@ const server = app.listen(PORT, () => {
   );
 });
 
-// Handle unhandled promise rejections
+// Handle unhandled promise rejections 
+// promiseのエラーを処理するためにある．
 process.on('unhandledRejection', (err, promise) => {
   console.log(`Error: ${err.message}`.red.bold);
 
